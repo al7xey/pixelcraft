@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelCraft — Контакты</title>
+  <link rel="icon" href="images/favicon.ico">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">PixelCraft</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navC">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navC">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Портфолио</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5" style="padding-top:100px;">
+    <h1 class="mb-4">Свяжитесь с нами</h1>
+
+    <div class="row g-4">
+      <!-- Contact form -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+          <h5>Напишите нам</h5>
+          <form id="contactForm" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Имя</label>
+              <input type="text" class="form-control" id="contactName" required>
+              <div class="invalid-feedback">Укажите имя.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+              <div class="invalid-feedback">Укажите корректный email.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Телефон</label>
+              <input type="tel" class="form-control" id="contactPhone">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Услуга</label>
+              <select class="form-select" id="contactService" required>
+                <option value="">Выберите</option>
+                <option value="web">Веб-разработка</option>
+                <option value="brand">Брендинг</option>
+                <option value="marketing">Маркетинг</option>
+              </select>
+              <div class="invalid-feedback">Выберите услугу.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Сообщение</label>
+              <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+              <div class="invalid-feedback">Опишите задачу.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Прикрепить бриф</label>
+              <input class="form-control" type="file" id="contactFile" accept=".pdf,.doc,.docx">
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary" type="submit">Отправить сообщение</button>
+              <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact cards + hours -->
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4 mb-4">
+          <h5>Контакты</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Москва, ул. Примерная, 10</p>
+          <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+7 (999) 123-45-67</p>
+          <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>hello@pixelcraft.ru</p>
+
+          <div class="mt-3">
+            <a class="btn btn-outline-primary me-2" href="#"><i class="bi bi-telegram"></i></a>
+            <a class="btn btn-outline-primary me-2" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-outline-primary" href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card shadow-sm p-4">
+          <h5>Часы работы</h5>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">Пн – Пт<span class="badge bg-success">09:00 — 18:00</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Сб<span class="badge bg-secondary">По записи</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Вс<span class="badge bg-light text-dark">Выходной</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map integration -->
+    <section class="mt-5">
+      <h3>Карта</h3>
+      <div class="ratio ratio-16x9">
+        <!-- Пример OpenStreetMap embed; при желании замените на Google Maps с ключом -->
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=37.6173%2C55.7558%2C37.6273%2C55.7658&layer=mapnik" style="border:0"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer py-4 bg-dark text-white text-center">© 2025 PixelCraft</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
