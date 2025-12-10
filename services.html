@@ -4,213 +4,158 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PixelCraft — Услуги</title>
-  <link rel="icon" href="images/favicon.ico">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">PixelCraft</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSrv">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="main-navigation">
+    <div class="page-container main-navigation__wrapper">
+      <a class="main-navigation__logo" href="index.html">PixelCraft</a>
+      <button class="main-navigation__toggle-button" id="js-menu-toggle">
+        <i class="bi bi-list"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSrv">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Портфолио</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
+      <ul class="main-navigation__list" id="js-nav-list">
+        <li><a class="main-navigation__link" href="index.html">Главная</a></li>
+        <li><a class="main-navigation__link main-navigation__link--active" href="services.html" aria-current="page">Услуги</a></li>
+        <li><a class="main-navigation__link" href="portfolio.html">Портфолио</a></li>
+        <li><a class="main-navigation__link" href="about.html">О нас</a></li>
+        <li><a class="main-navigation__link" href="contacts.html">Контакты</a></li>
+      </ul>
     </div>
   </nav>
 
-  <main class="container py-5" style="padding-top:100px;">
-    <h1 class="mb-4">Наши услуги</h1>
+  <main class="main-content page-container">
+    <h1 class="section-title">Наши компетенции</h1>
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 card-hover shadow-sm">
-          <div class="card-body text-center p-4">
-            <span class="badge bg-primary mb-2">Популярно</span>
-            <h5 class="card-title">Веб-разработка</h5>
-            <p class="card-text">Создаём адаптивные сайты, SPA, интернет-магазины, интеграции и поддержку.</p>
-            <a href="#web" class="btn btn-outline-primary btn-sm">Подробнее</a>
-          </div>
-        </div>
-      </div>
+    <section>
+        <ul class="tab-navigation">
+            <li><button class="tab-navigation__button tab-navigation__button--active" data-tab-target="tab-web" aria-selected="true">Веб-разработка</button></li>
+            <li><button class="tab-navigation__button" data-tab-target="tab-mobile" aria-selected="false">Мобильные приложения</button></li>
+            <li><button class="tab-navigation__button" data-tab-target="tab-design" aria-selected="false">Дизайн</button></li>
+        </ul>
 
-      <div class="col-md-4">
-        <div class="card h-100 card-hover shadow-sm">
-          <div class="card-body text-center p-4">
-            <span class="badge bg-success mb-2">Новый</span>
-            <h5 class="card-title">SEO & Маркетинг</h5>
-            <p class="card-text">SEO-аудит, контент-стратегия и платная реклама с аналитикой.</p>
-            <a href="#marketing" class="btn btn-outline-primary btn-sm">Подробнее</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card h-100 card-hover shadow-sm">
-          <div class="card-body text-center p-4">
-            <span class="badge bg-secondary mb-2">Брендинг</span>
-            <h5 class="card-title">Дизайн и брендинг</h5>
-            <p class="card-text">Фирменный стиль, логотип, упаковка и презентации.</p>
-            <a href="#brand" class="btn btn-outline-primary btn-sm">Подробнее</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="mt-5">
-      <ul class="nav nav-tabs" id="servicesTab">
-        <li class="nav-item">
-          <button class="nav-link active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web">Веб</button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand">Брендинг</button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing">Маркетинг</button>
-        </li>
-      </ul>
-      <div class="tab-content p-4 border border-top-0" id="servicesTabContent">
-        <div class="tab-pane fade show active" id="web" role="tabpanel">
-          <h4>Веб-разработка</h4>
-          <p class="text-muted">От прототипирования до деплоя: frontend, backend, интеграции, аналитика и поддержка.</p>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Прототип и UX
-              <span class="badge bg-primary rounded-pill">входит</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              Адаптивная верстка
-              <span class="badge bg-primary rounded-pill">входит</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              SEO-оптимизация
-              <span class="badge bg-warning rounded-pill">опция</span>
-            </li>
-          </ul>
-          <div class="mt-4">
-            <h5>Используемые технологии:</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-primary">React</span>
-              <span class="badge bg-primary">TypeScript</span>
-              <span class="badge bg-success">Node.js</span>
-              <span class="badge bg-info">Vue.js</span>
-              <span class="badge bg-secondary">Python</span>
+        <div class="tab-content-wrapper">
+            <div id="tab-web" class="tab-content-pane tab-content-pane--active" tabindex="0">
+                <h3 class="team-member-card__title">Разработка сайтов любой сложности</h3>
+                <p>От простых лендингов до сложных CRM-систем.</p>
+                <div class="content-grid-2" style="margin-top: var(--spacing-large);">
+                    <div>
+                        <ul class="service-feature-list">
+                            <li class="service-feature-list__item">Корпоративные порталы</li>
+                            <li class="service-feature-list__item">Интернет-магазины</li>
+                            <li class="service-feature-list__item">API интеграции</li>
+                        </ul>
+                        <div class="service-tech-badges">
+                            <span class="ui-badge ui-badge--info">React</span>
+                            <span class="ui-badge ui-badge--info">Vue</span>
+                            <span class="ui-badge ui-badge--secondary">PHP</span>
+                        </div>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="tab-pane fade" id="brand" role="tabpanel">
-          <h4>Брендинг</h4>
-          <p class="text-muted">Исследование рынка, позиционирование, визуальные концепции и гайдлайны.</p>
-          <div class="mt-4">
-            <h5>Направления работы:</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-primary">Логотип</span>
-              <span class="badge bg-success">Фирменный стиль</span>
-              <span class="badge bg-info">Гайдлайны</span>
-              <span class="badge bg-secondary">Упаковка</span>
+            <div id="tab-mobile" class="tab-content-pane" tabindex="0">
+                <h3 class="team-member-card__title">Нативные и кроссплатформенные приложения</h3>
+                <p>Разработка под iOS и Android для вашего стартапа.</p>
+                <div class="service-tech-badges">
+                    <span class="ui-badge ui-badge--success">Flutter</span>
+                    <span class="ui-badge ui-badge--primary">Swift</span>
+                    <span class="ui-badge ui-badge--secondary">Kotlin</span>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="tab-pane fade" id="marketing" role="tabpanel">
-          <h4>Маркетинг</h4>
-          <p class="text-muted">Стратегия запуска, ведение таргета, контент-план и аналитика KPI.</p>
-          <div class="mt-4">
-            <h5>Маркетинговые инструменты:</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-primary">SEO</span>
-              <span class="badge bg-success">SMM</span>
-              <span class="badge bg-info">Контекстная реклама</span>
-              <span class="badge bg-secondary">Аналитика</span>
+            <div id="tab-design" class="tab-content-pane" tabindex="0">
+                <h3 class="team-member-card__title">Проектирование пользовательского опыта</h3>
+                <p>Создаем удобные интерфейсы, которыми приятно пользоваться.</p>
+                <ul class="service-feature-list">
+                    <li class="service-feature-list__item">CJM и исследования</li>
+                    <li class="service-feature-list__item">Прототипирование в Figma</li>
+                    <li class="service-feature-list__item">Дизайн-системы</li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <section class="mt-5">
-      <h3>Процесс работы</h3>
-      <div class="list-group">
-        <div class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Бриф</div>
-            Сбор требований и целей проекта.
-          </div>
-          <span class="badge bg-primary rounded-pill">1</span>
+    <section class="section-spacing">
+        <h2 class="section-title">Как мы работаем</h2>
+        <div class="process-list">
+            <div class="process-list__item">
+                <div class="process-list__title">Аналитика</div>
+                <div class="process-list__number">1</div>
+            </div>
+            <div class="process-list__item">
+                <div class="process-list__title">Прототипирование</div>
+                <div class="process-list__number">2</div>
+            </div>
+            <div class="process-list__item">
+                <div class="process-list__title">Разработка</div>
+                <div class="process-list__number">3</div>
+            </div>
+            <div class="process-list__item">
+                <div class="process-list__title">Тестирование и запуск</div>
+                <div class="process-list__number">4</div>
+            </div>
         </div>
-        <div class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Прототип</div>
-            UX, wireframes и mockups.
-          </div>
-          <span class="badge bg-primary rounded-pill">2</span>
-        </div>
-        <div class="list-group-item d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
-            <div class="fw-bold">Разработка</div>
-            Код, интеграции, тесты.
-          </div>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </div>
-      </div>
     </section>
 
-    <section class="mt-5">
-      <h3>Вопросы и ответы</h3>
-      <div class="accordion" id="faq">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-              Сколько времени занимает разработка?
-            </button>
-          </h2>
-          <div id="collapse1" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              Сроки зависят от сложности проекта. Лендинг — от 2 недель, корпоративный сайт — 4-6 недель, интернет-магазин — от 6 недель.
+    <section class="section-spacing">
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="accordion-component">
+            
+            <div class="accordion-item" data-accordion-group="faq">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" data-accordion-toggle aria-expanded="true">
+                        Сколько стоит разработка лендинга?
+                    </button>
+                </h3>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        Стоимость начинается от 50 000 рублей и зависит от сложности дизайна и функционала.
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-              Предоставляете ли поддержку после релиза?
-            </button>
-          </h2>
-          <div id="collapse2" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Да, мы предлагаем различные варианты технической поддержки и сопровождения проектов.
+            <div class="accordion-item" data-accordion-group="faq">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" data-accordion-toggle aria-expanded="false">
+                        Вы работаете по договору?
+                    </button>
+                </h3>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        Да, мы работаем официально, заключаем договор и предоставляем закрывающие документы.
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="accordion-item" data-accordion-group="faq">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" data-accordion-toggle aria-expanded="false">
+                        Есть ли техподдержка после сдачи?
+                    </button>
+                </h3>
+                <div class="accordion-content-wrapper">
+                    <div class="accordion-content">
+                        Мы предоставляем 1 месяц бесплатной гарантийной поддержки. Далее возможен переход на абонентское обслуживание.
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
     </section>
-
-    <div class="mt-4">
-      <a href="contacts.html" class="btn btn-primary">
-        <i class="bi bi-chat-dots me-2"></i>Обсудить проект
-      </a>
-    </div>
 
   </main>
 
-  <footer class="footer py-4 bg-dark text-light">
-    <div class="container text-center">© 2025 PixelCraft</div>
+  <footer class="main-footer">
+    <div class="page-container">
+        <p>© 2025 PixelCraft. Все права защищены.</p>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

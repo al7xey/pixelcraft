@@ -5,112 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PixelCraft — О нас</title>
   <link rel="icon" href="images/favicon.ico">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">PixelCraft</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navA">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="main-navigation" aria-label="Основная навигация">
+    <div class="page-container main-navigation__wrapper">
+      <a class="main-navigation__logo" href="index.html">PixelCraft</a>
+      <button class="main-navigation__toggle-button" id="js-menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <i class="bi bi-list"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navA">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Портфолио</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">О нас</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-      </div>
+      <ul class="main-navigation__list" id="js-nav-list">
+        <li><a class="main-navigation__link" href="index.html">Главная</a></li>
+        <li><a class="main-navigation__link" href="services.html">Услуги</a></li>
+        <li><a class="main-navigation__link" href="portfolio.html">Портфолио</a></li>
+        <li><a class="main-navigation__link main-navigation__link--active" href="about.html" aria-current="page">О нас</a></li>
+        <li><a class="main-navigation__link" href="contacts.html">Контакты</a></li>
+      </ul>
     </div>
   </nav>
 
-  <main class="container py-5" style="padding-top:100px;">
-    <h1 class="mb-4">О команде PixelCraft</h1>
+  <main class="main-content page-container">
+    <h1 class="section-title">О команде PixelCraft</h1>
 
-    <section class="row g-4">
-      <div class="col-md-4">
-        <div class="card card-hover h-100 shadow-sm">
-          <div class="card-body text-center p-4">
-            <i class="bi bi-person-circle fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Анна Иванова</h5>
-            <p class="card-text">Арт-директор — UX/UI, брендинг.</p>
-            <div><span class="badge bg-primary">UI/UX</span> <span class="badge bg-secondary">Branding</span></div>
+    <section>
+      <h2 class="visually-hidden">Наша команда</h2>
+      <div class="content-grid-3">
+        
+        <article class="team-member-card team-member-card--hover">
+          <i class="bi bi-person-circle team-member-card__icon"></i>
+          <h3 class="team-member-card__title">Анна Иванова</h3>
+          <p class="team-member-card__role">Арт-директор — UX/UI, брендинг.</p>
+          <div class="team-member-card__badges">
+            <span class="ui-badge ui-badge--primary">UI/UX</span> 
+            <span class="ui-badge ui-badge--secondary">Branding</span>
           </div>
-        </div>
+        </article>
+
+        <article class="team-member-card team-member-card--hover">
+          <i class="bi bi-person-circle team-member-card__icon"></i>
+          <h3 class="team-member-card__title">Максим Кузнецов</h3>
+          <p class="team-member-card__role">Senior Developer — frontend & backend.</p>
+          <div class="team-member-card__badges">
+            <span class="ui-badge ui-badge--primary">React</span> 
+            <span class="ui-badge ui-badge--success">Node.js</span>
+          </div>
+        </article>
+
+        <article class="team-member-card team-member-card--hover">
+          <i class="bi bi-people-fill team-member-card__icon"></i>
+          <h3 class="team-member-card__title">Мы — команда</h3>
+          <p class="team-member-card__role">Аналитики, дизайнеры, разработчики и менеджеры — вместе для результата.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="col-md-4">
-        <div class="card card-hover h-100 shadow-sm">
-          <div class="card-body text-center p-4">
-            <i class="bi bi-person-circle fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Максим Кузнецов</h5>
-            <p class="card-text">Senior Developer — frontend & backend.</p>
-            <div><span class="badge bg-primary">React</span> <span class="badge bg-success">Node.js</span></div>
-          </div>
+    <section class="section-spacing">
+      <h2 class="section-title">Наша история</h2>
+      <ul class="history-list">
+        <li class="history-list__item">2015 — Основание студии</li>
+        <li class="history-list__item">2018 — Первые крупные клиенты</li>
+        <li class="history-list__item">2022 — Масштабирование команды</li>
+      </ul>
+    </section>
+
+    <section class="section-spacing">
+      <h2 class="section-title text-center">Наши ценности</h2>
+      <div class="values-grid">
+        <div class="value-block">
+          <i class="bi bi-lightning-charge value-block__icon"></i>
+          <h3 class="value-block__title">Инициатива</h3>
+          <p class="value-block__description">Мы предлагаем решения, а не проблемы.</p>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card card-hover h-100 shadow-sm">
-          <div class="card-body text-center p-4">
-            <i class="bi bi-people-fill fs-1 text-primary mb-3"></i>
-            <h5 class="card-title">Мы — команда</h5>
-            <p class="text-muted">Аналитики, дизайнеры, разработчики и менеджеры — вместе для результата.</p>
-          </div>
+        <div class="value-block">
+          <i class="bi bi-shield-lock value-block__icon"></i>
+          <h3 class="value-block__title">Надежность</h3>
+          <p class="value-block__description">Честные сроки и прозрачные договоры.</p>
+        </div>
+        <div class="value-block">
+          <i class="bi bi-bar-chart value-block__icon"></i>
+          <h3 class="value-block__title">Результат</h3>
+          <p class="value-block__description">Мы ориентированы на рост бизнеса клиента.</p>
         </div>
       </div>
     </section>
 
-    <section class="mt-5">
-      <h3>Наша история</h3>
-      <div class="list-group">
-        <div class="list-group-item">2015 — Основание студии</div>
-        <div class="list-group-item">2018 — Первые крупные клиенты</div>
-        <div class="list-group-item">2022 — Масштабирование команды</div>
-      </div>
-    </section>
-
-    <section class="mt-5">
-      <h3>Наши ценности</h3>
-      <div class="row text-center g-4">
-        <div class="col-md-4">
-          <i class="bi bi-lightning-charge fs-1 text-primary"></i>
-          <h5 class="mt-3">Инициатива</h5>
-          <p class="text-muted">Мы предлагаем решения, а не проблемы.</p>
-        </div>
-        <div class="col-md-4">
-          <i class="bi bi-shield-lock fs-1 text-primary"></i>
-          <h5 class="mt-3">Надежность</h5>
-          <p class="text-muted">Честные сроки и прозрачные договоры.</p>
-        </div>
-        <div class="col-md-4">
-          <i class="bi bi-bar-chart fs-1 text-primary"></i>
-          <h5 class="mt-3">Результат</h5>
-          <p class="text-muted">Мы ориентированы на рост бизнеса клиента.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="mt-5">
-      <h3>Ключевые показатели</h3>
-      <div class="d-flex gap-3 flex-wrap">
-        <span class="badge bg-primary fs-6 p-3">120+ проектов</span>
-        <span class="badge bg-success fs-6 p-3">98% довольных клиентов</span>
-        <span class="badge bg-info fs-6 p-3">10 лет на рынке</span>
+    <section class="section-spacing">
+      <h2 class="section-title">Ключевые показатели</h2>
+      <div class="data-metrics">
+        <span class="ui-badge ui-badge--primary data-metrics__item">120+ проектов</span>
+        <span class="ui-badge ui-badge--success data-metrics__item">98% довольных клиентов</span>
+        <span class="ui-badge ui-badge--info data-metrics__item">10 лет на рынке</span>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer py-4 bg-dark text-light text-center">© 2025 PixelCraft</footer>
+  <footer class="main-footer">
+    <div class="page-container">
+        <p>© 2025 PixelCraft. Все права защищены.</p>
+    </div>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
